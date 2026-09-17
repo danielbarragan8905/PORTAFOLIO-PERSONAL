@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daniel Barragán · Desarrollador Front-End Junior</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav id="navbar">
+  <a class="nav-brand" href="#welcome-section">Daniel Barragán</a>
+  <div class="nav-links">
+    <a href="#about">Perfil</a>
+    <a href="#skills">Habilidades</a>
+    <a href="#projects">Proyectos</a>
+    <a href="#contact">Contacto</a>
+  </div>
+</nav>
+
+<header id="welcome-section">
+  <div class="grid-field" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <p class="hero-kicker">Bogotá, Colombia</p>
+    <h1>Daniel Barragán construye<br>interfaces, <em>fila por fila.</em></h1>
+    <p class="hero-lede">
+      Desarrollador Front-End Junior certificado en Diseño Web Responsivo (freeCodeCamp).
+      Después de más de una década gestionando negocios, ahora maqueto interfaces con
+      HTML5, CSS3, Flexbox y CSS Grid — con la misma disciplina que antes aplicaba a
+      inventarios y cotizaciones.
+    </p>
+    <div class="hero-actions">
+      <a class="tab-button" href="#projects">Ver proyectos</a>
+      <a class="tab-button tab-button--ghost" href="#contact">Contactarme</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section id="about">
+    <div class="section-head">
+      <span class="coord">A·1</span>
+      <h2>De la administración al código</h2>
+    </div>
+    <div class="about-grid">
+      <p>
+        Trabajé más de diez años en gestión administrativa — proveedores, inventarios,
+        cotizaciones, control de stock — en negocios propios y en empresas como Súper
+        Electroriente y BSI Colombia. Esa base me dejó algo que uso todos los días como
+        desarrollador: atención al detalle y método para resolver problemas paso a paso.
+      </p>
+      <p>
+        En 2026 obtuve la certificación <strong>Diseño Web Responsivo (Legacy V8)</strong>
+        de freeCodeCamp, tras cerca de 300 horas de formación en HTML5, CSS3, Flexbox,
+        CSS Grid, media queries y selectores avanzados. Este portafolio reúne los
+        proyectos que construí durante ese proceso.
+      </p>
+      <svg class="about-diagram" viewBox="0 0 220 180" role="img" aria-label="Diagrama de cuadrícula CSS Grid">
+        <rect x="10" y="10" width="200" height="160" fill="none" stroke="var(--blueprint)" stroke-width="2"/>
+        <line x1="10" y1="63" x2="210" y2="63" stroke="var(--line)" stroke-width="1.5"/>
+        <line x1="10" y1="116" x2="210" y2="116" stroke="var(--line)" stroke-width="1.5"/>
+        <line x1="76" y1="10" x2="76" y2="170" stroke="var(--line)" stroke-width="1.5"/>
+        <line x1="143" y1="10" x2="143" y2="170" stroke="var(--brick)" stroke-width="2"/>
+        <rect x="76" y="63" width="67" height="53" fill="var(--brick)" opacity="0.18"/>
+        <text x="20" y="30" font-family="IBM Plex Mono" font-size="11" fill="var(--ink)">grid-template</text>
+      </svg>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="section-head">
+      <span class="coord">B·2</span>
+      <h2>Habilidades técnicas</h2>
+    </div>
+    <div class="skills-cols">
+      <div class="skill-group">
+        <h3>Lenguajes y maquetado</h3>
+        <ul class="tag-list">
+          <li>HTML5 semántico</li>
+          <li>CSS3</li>
+          <li>Flexbox</li>
+          <li>CSS Grid</li>
+          <li>Media queries</li>
+          <li>Selectores avanzados</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3>Herramientas y base</h3>
+        <ul class="tag-list">
+          <li>Git básico</li>
+          <li>Depuración de CSS</li>
+          <li>Accesibilidad web</li>
+          <li>Fundamentos de Python</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3>Del área administrativa</h3>
+        <ul class="tag-list">
+          <li>Organización</li>
+          <li>Atención al detalle</li>
+          <li>Gestión de procesos</li>
+          <li>Comunicación con clientes</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="section-head">
+      <span class="coord">C·3</span>
+      <h2 id="project-title">Proyectos</h2>
+    </div>
+    <div class="project-grid">
+
+      <article class="project-tile">
+        <p class="project-tab">HTML · CSS · Flexbox</p>
+        <h3>Balance Sheet</h3>
+        <p>Hoja de balance financiero responsiva con encabezados fijos y estilos condicionales según el estado de los datos.</p>
+        <a href="https://danielbarragan8905.github.io/BALANCE-SHEET-RESPONSIVE/" target="_blank" rel="noopener noreferrer">Ver demo en vivo</a>
+      </article>
+
+      <article class="project-tile">
+        <p class="project-tab">HTML · CSS · Selectores</p>
+        <h3>Book Inventory App</h3>
+        <p>Inventario de libros con estados visuales (leído, por leer, en progreso) y un sistema de calificación por selectores combinados.</p>
+        <a href="https://danielbarragan8905.github.io/BOOK-INVENTORY-APP-/" target="_blank" rel="noopener noreferrer">Ver demo en vivo</a>
+      </article>
+
+      <article class="project-tile">
+        <p class="project-tab">HTML · CSS · Media queries</p>
+        <h3>Piano Responsivo</h3>
+        <p>Interfaz de piano con distribución adaptable en tres puntos de quiebre distintos.</p>
+        <a href="https://danielbarragan8905.github.io/PIANO-RESPONSIVO-/" target="_blank" rel="noopener noreferrer">Ver demo en vivo</a>
+      </article>
+
+      <article class="project-tile">
+        <p class="project-tab">HTML · CSS · JS · GitHub Pages</p>
+        <h3>Encuesta Noémbulos</h3>
+        <p>Encuesta interactiva desplegada de principio a fin, desde el desarrollo hasta la puesta en producción.</p>
+        <a href="https://danielbarragan8905.github.io/encuesta-plantitas/" target="_blank" rel="noopener noreferrer">Ver demo en vivo</a>
+      </article>
+
+      <article class="project-tile">
+        <p class="project-tab">Proyecto de certificación</p>
+        <h3>Página de Tributo — Marie Curie</h3>
+        <p>Página biográfica con estructura semántica figure/figcaption, estilos de tarjeta y enlace externo a Wikipedia.</p>
+        <a href="https://danielbarragan8905.github.io/P-GINA-DE-TRIBUTO/" target="_blank" rel="noopener noreferrer">Ver demo en vivo</a>
+      </article>
+
+      <article class="project-tile">
+        <p class="project-tab">Proyecto de certificación</p>
+        <h3>Documentación Técnica</h3>
+        <p>Menú lateral fijo, anclas de scroll suave y diseño responsivo para una documentación técnica completa.</p>
+        <a href="https://danielbarragan8905.github.io/PAGINA-DE-DOCUMENTACION-TECNICA/" target="_blank" rel="noopener noreferrer">Ver demo en vivo</a>
+      </article>
+
+      <article class="project-tile">
+        <p class="project-tab">Proyecto de certificación</p>
+        <h3>Aterrizaje de Producto</h3>
+        <p>Landing page comercial con formulario de captura, video embebido y planes de precios.</p>
+        <a href="https://danielbarragan8905.github.io/PAGINA-DE-ATERRIZAJE-DE-PRODUCTO/" target="_blank" rel="noopener noreferrer">Ver demo en vivo</a>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer id="contact">
+  <div class="footer-inner">
+    <div>
+      <h2>Hablemos</h2>
+      <p>Disponible para oportunidades como desarrollador Front-End Junior.</p>
+    </div>
+    <div class="footer-contacts">
+      <a href="mailto:dricardobc@hotmail.com">dricardobc@hotmail.com</a>
+      <a href="tel:+573228012748">322 801 2748</a>
+      <a id="profile-link" href="https://github.com/danielbarragan8905" target="_blank" rel="noopener noreferrer">github.com/danielbarragan8905</a>
+    </div>
+  </div>
+  <p class="footer-note">Diseñado y construido por Daniel Barragán.</p>
+</footer>
+
+</body>
+</html>
