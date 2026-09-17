@@ -1,0 +1,342 @@
+:root {
+  --paper: #E9EBE2;
+  --paper-raised: #F4F5EE;
+  --ink: #1C2620;
+  --panel: #16302E;
+  --panel-ink: #ECEFE7;
+  --blueprint: #35618B;
+  --blueprint-soft: #6E8FA8;
+  --brick: #A8452E;
+  --line: #C7C2AC;
+
+  --font-display: "Fraunces", serif;
+  --font-body: "IBM Plex Sans", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--blueprint);
+  text-decoration-color: var(--blueprint-soft);
+}
+a:hover { color: var(--brick); }
+
+:focus-visible {
+  outline: 2px solid var(--brick);
+  outline-offset: 3px;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  color: var(--ink);
+  margin: 0;
+  font-weight: 600;
+}
+
+em { font-style: italic; color: inherit; }
+
+/* NAVBAR */
+
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background: var(--panel);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 clamp(1.25rem, 4vw, 3rem);
+  z-index: 100;
+  border-bottom: 1px solid rgba(236, 239, 231, 0.15);
+}
+
+.nav-brand {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--panel-ink);
+  text-decoration: none;
+  letter-spacing: 0.01em;
+}
+
+.nav-links {
+  display: flex;
+  gap: clamp(1rem, 3vw, 2rem);
+}
+
+.nav-links a {
+  color: var(--panel-ink);
+  text-decoration: none;
+  font-size: 0.92rem;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+}
+
+.nav-links a:hover {
+  color: var(--panel-ink);
+  border-bottom-color: var(--brick);
+}
+
+/* HERO */
+
+#welcome-section {
+  position: relative;
+  padding: calc(64px + 5rem) clamp(1.25rem, 6vw, 4rem) 5rem;
+  overflow: hidden;
+  border-bottom: 2px solid var(--ink);
+}
+
+.grid-field {
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(to right, var(--line) 0 1px, transparent 1px 48px),
+    repeating-linear-gradient(to bottom, var(--line) 0 1px, transparent 1px 48px);
+  opacity: 0.5;
+}
+
+.hero-inner {
+  position: relative;
+  max-width: 46rem;
+}
+
+.hero-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--blueprint);
+  margin: 0 0 1rem;
+}
+
+#welcome-section h1 {
+  font-size: clamp(2.1rem, 5vw, 3.4rem);
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+}
+
+.hero-lede {
+  max-width: 38rem;
+  font-size: 1.05rem;
+  color: var(--ink);
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.tab-button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: var(--brick);
+  color: var(--panel-ink);
+  text-decoration: none;
+  border: 2px solid var(--ink);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}
+
+.tab-button:hover { background: var(--ink); color: var(--panel-ink); }
+
+.tab-button--ghost {
+  background: transparent;
+  color: var(--ink);
+}
+.tab-button--ghost:hover { background: var(--ink); color: var(--paper); }
+
+/* SECTIONS */
+
+main section, footer {
+  padding: 4.5rem clamp(1.25rem, 6vw, 4rem);
+}
+
+main section { border-bottom: 1px solid var(--line); }
+
+.section-head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.9rem;
+  margin-bottom: 2.5rem;
+}
+
+.coord {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--blueprint);
+  border: 1px solid var(--blueprint-soft);
+  padding: 0.15rem 0.45rem;
+}
+
+.section-head h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+/* ABOUT */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  max-width: 62rem;
+}
+
+.about-grid p { max-width: 34rem; }
+.about-grid p + p { margin-top: 1.2rem; }
+
+.about-diagram {
+  width: 100%;
+  max-width: 220px;
+  justify-self: center;
+}
+
+/* SKILLS */
+
+.skills-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  max-width: 62rem;
+}
+
+.skill-group h3 {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: none;
+  color: var(--blueprint);
+  margin-bottom: 0.9rem;
+}
+
+.tag-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag-list li {
+  border: 1px solid var(--ink);
+  padding: 0.35rem 0.7rem;
+  font-size: 0.85rem;
+  background: var(--paper-raised);
+}
+
+/* PROJECTS */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.75rem;
+  max-width: 72rem;
+}
+
+.project-tile {
+  background: var(--paper-raised);
+  border: 1px solid var(--ink);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.project-tab {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--blueprint);
+  margin: 0 0 0.3rem;
+}
+
+.project-tile h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.2rem;
+}
+
+.project-tile p:not(.project-tab) {
+  font-size: 0.92rem;
+  flex-grow: 1;
+}
+
+.project-tile a {
+  font-size: 0.9rem;
+  align-self: flex-start;
+  margin-top: 0.5rem;
+}
+
+/* FOOTER */
+
+footer {
+  background: var(--panel);
+  color: var(--panel-ink);
+  border-bottom: none;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 72rem;
+}
+
+footer h2 { color: var(--panel-ink); font-size: 1.7rem; margin-bottom: 0.6rem; }
+footer p { color: var(--panel-ink); opacity: 0.85; max-width: 26rem; }
+
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footer-contacts a {
+  color: var(--panel-ink);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(236, 239, 231, 0.35);
+  padding-bottom: 2px;
+  width: fit-content;
+}
+.footer-contacts a:hover { border-bottom-color: var(--brick); color: var(--panel-ink); }
+
+.footer-note {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  opacity: 0.6;
+  margin-top: 3rem;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 780px) {
+  .nav-links { gap: 0.9rem; }
+  .nav-links a { font-size: 0.82rem; }
+  .about-grid { grid-template-columns: 1fr; }
+  .about-diagram { max-width: 160px; }
+  .skills-cols { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+@media (max-width: 480px) {
+  #navbar { padding: 0 1rem; }
+  .nav-brand { font-size: 0.9rem; }
+  .nav-links { gap: 0.7rem; }
+}
